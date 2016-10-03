@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <script type="text/javascript" src="../lib/jsui.js"></script>
+  <script type="text/javascript" src="../lib/module_tree.js"></script>
+  <script type="text/javascript" src="../lib/module_tabs.js"></script>
+  <script type="text/javascript" src="../lib/module_boxr.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', jsui.doInit);
+  </script>
+  <style type="text/css">
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+<tabs>
+<tab name="Tree">
+<tree name="A Tree">
+    <branch>Branch 1</branch>
+    <branch>Branch 2</branch>
+    <branch>
+      <tree name="Sub-tree" folded>
+        <branch>Sub 1</branch>
+        <branch>Sub 2</branch>
+      </tree>
+    </branch>
+  </tree>
+</tab>
+<tab name="Boxes">
+<vbox>
+    <box grip='down'>
+      <tree name="A Tree">
+        <branch>Branch 1</branch>
+        <branch>Branch 2</branch>
+        <branch>
+          <tree name="Sub-tree" folded>
+            <branch>Sub 1</branch>
+            <branch>Sub 2</branch>
+          </tree>
+        </branch>
+      </tree>
+    </box>
+    <box>
+    <tabs>
+      <tab> Tab A </tab> <tab> Tab B </tab>
+    </tabs>
+    </box>
+  </vbox>
+</tab>
+</tabs>
+</body>
+</html>
